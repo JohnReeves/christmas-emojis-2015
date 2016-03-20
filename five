@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>Oldfield Christmas Emojis</title>
+</head>
+<body>
+
+  <svg width="500"                                                    height="500">
+ <polygon points="250,50 300,200 450,200 350,300 400,450 250,350 100,450 150,300 50,200 200,200" fill="blue" id="triangle"></polygon>
+ <polygon points="250,50 250,250 300,200" fill="gold"></polygon>
+ <polygon points="450,200 350,300 250,250" fill="gold"></polygon>
+ <polygon points="400,450 250,250 250,350" fill="gold"></polygon>
+ <polygon points="100,450 250,250 150,300" fill="gold"></polygon>
+ <polygon points="50,200 250,250 200,200" fill="gold"></polygon>
+ <circle cx="250" cy="250" r="10" fill="red" id="button"></circle>
+ <line x1="250" x2="280" y1="50" y2="35"
+       stroke-width="8" stroke="green" stroke-linecap="round"></line>
+ <line x1="280" x2="320" y1="35" y2="40"
+       stroke-width="8" stroke="orange" stroke-linecap="round"></line>
+<line x1="320" x2="350" y1="40" y2="50"
+       stroke-width="8" stroke="pink" stroke-linecap="round"></line>
+<line x1="350" x2="375" y1="50" y2="60"
+       stroke-width="8" stroke="purple" stroke-linecap="round"></line>
+<line x1="450" x2="475" y1="200" y2="220"
+       stroke-width="8" stroke="green" stroke-linecap="round"></line>
+<line x1="475" x2="478" y1="220" y2="250"
+       stroke-width="8" stroke="orange" stroke-linecap="round"></line>
+<line x1="478" x2="475" y1="250" y2="283"
+       stroke-width="8" stroke="pink" stroke-linecap="round"></line>
+<line x1="475" x2="470" y1="283" y2="313"
+       stroke-width="8" stroke="purple" stroke-linecap="round"></line>
+ <line x1="400" x2="375" y1="450" y2="468"
+       stroke-width="8" stroke="green" stroke-linecap="round"></line>
+ <line x1="375" x2="345" y1="468" y2="466"
+       stroke-width="8" stroke="orange" stroke-linecap="round"></line>
+ <line x1="345" x2="315" y1="466" y2="462"
+       stroke-width="8" stroke="pink" stroke-linecap="round"></line>
+ <line x1="315" x2="287" y1="462" y2="458"
+       stroke-width="8" stroke="purple" stroke-linecap="round"></line>
+ <line x1="100" x2="85" y1="450" y2="420"
+       stroke-width="8" stroke="green" stroke-linecap="round"></line>
+ <line x1="85" x2="83" y1="420" y2="395"
+       stroke-width="8" stroke="orange" stroke-linecap="round"></line>
+ <line x1="83" x2="88" y1="395" y2="370"
+       stroke-width="8" stroke="pink" stroke-linecap="round"></line>
+ <line x1="88" x2="94" y1="370" y2="345"
+       stroke-width="8" stroke="purple" stroke-linecap="round"></line>
+ <line x1="50" x2="58" y1="200" y2="175"
+       stroke-width="8" stroke="green" stroke-linecap="round"></line>
+<line x1="58" x2="70" y1="175" y2="155"
+       stroke-width="8" stroke="orange" stroke-linecap="round"></line>
+ <line x1="70" x2="82" y1="155" y2="135"
+       stroke-width="8" stroke="pink" stroke-linecap="round"></line>
+ <line x1="82" x2="96" y1="135" y2="115"
+       stroke-width="8" stroke="purple" stroke-linecap="round"></line>
+</svg>
+
+<p style="color:#BFBFBF;">
+  hint: click on the blue traingles
+</p>
+
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script>
+var buttonShape = $("#button");
+buttonShape.click(function() {
+			alert("Merry Christmas");
+});
+
+var triangleShape = $("#triangle");
+
+var isTriangleBlue;
+isTriangleBlue = true;
+triangleShape.click(function() {
+	if(isTriangleBlue == true){
+  triangleShape.attr("fill", "silver");
+
+  isTriangleBlue = false;
+
+} else {
+    triangleShape.attr("fill", "blue");
+
+    isTriangleBlue = true;
+}
+})
+
+
+
+</script>
+</html>
+
+
