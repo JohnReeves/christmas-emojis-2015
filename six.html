@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>Oldfield Christmas Emojis</title>
+</head>
+<body>
+  <svg width="500" height="500">
+
+    <polygon points="0,0 500,0 500,500 0,500" fill="#85DDBA" />
+    <circle cx="250" cy="250" r="100" fill="url(#linearGrad)" id="bauble"></circle>
+    <linearGradient id="linearGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-colour="#000000" />
+      <stop offset="100%" stop-color="#F44336" />
+    </linearGradient>
+    <polygon points="225,150 225,125 275,125 275,150" fill="#FFCA28" />
+    <line x1="250" x2="250" y1="0" y2="125" stroke-width="3" stroke="#000000" stroke-linecap="round" />
+    <text x="125" y="400" fill="white" font-family="Verdana" font-size="30"> Merry Christmas </text>
+    <ellipse cx="305" cy="195" rx="25" ry="11" fill="#ffffff" transform="rotate(40,305,195)" />
+
+  </svg>
+
+  <p style="color:#BFBFBF;">
+    hint: click on the bauble
+  </p>
+
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script>
+var baubleShape = $("#bauble");
+var isBaubleRed;
+var isBaubleGreen;
+isBaubleRed = true;
+baubleShape.click(function() {
+  if (isBaubleRed == true) {
+    //bauble is red - make it green
+    baubleShape.attr("fill", "#077146");
+    isBaubleRed = false;
+  } else if (isBaubleRed == false) {
+    //bauble is green make it blue
+    baubleShape.attr("fill", "#7AC8EC");
+    isBaubleRed = true;
+  } else {
+    //bauble isn't red - make it red again
+    baubleShape.attr("fill", "url(#linearGrad)");
+
+    isBaubleRed = true;
+  }
+  alert("Merry Christmas");
+});
+
+</script>
+</html>
+
