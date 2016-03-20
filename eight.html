@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>Oldfield Christmas Emojis</title>
+</head>
+<body>
+  <svg width="500" height="500">
+  <polygon points ="0,0 500,0 500,500 0,500" fill="green"></polygon>
+  <circle cx="250" cy="300" r="150" fill="url(#radialGrad)"></circle>
+  <radialGradient id="radialGrad" cx="50%" cy="50%" r="50%"
+  fx="50%" fy="75%">
+  <stop offset="25%" stop-color="#4E2723"/>
+  <stop offset="100%" stop-color="#795548"/>
+  </radialGradient>
+  <circle cx="250" cy="350" r="50" fill="url(#radialGrad1)"id="nose"></circle>
+  <radialGradient id="radialGrad1" cx="50%" cy="50%" r="50%"
+  fx="50%" fy="75%">
+  <stop offset="25%" stop-color="#F44336"/>
+  <stop offset="100%" stop-color="#B71C1C"/>
+  </radialGradient>
+  <circle cx="200" cy="230" r="25" fill="url(#radialGrad2)"></circle>
+  <circle cx="300" cy="230" r="25" fill="url(#radialGrad2)"></circle>
+  <radialGradient id="radialGrad2" cx="50%" cy="50%" r="50%"
+  fx="50%" fy="75%">
+  <stop offset="25%" stop-color="#9E9E9E"/>
+  <stop offset="100%" stop-color="#FFFFFF"/>
+  </radialGradient>
+  <circle cx="215" cy="230" r="12.5" fill="#000000"></circle>
+  <circle cx="285" cy="230" r="12.5" fill="#000000"></circle>
+  <line x1="160" x2="160" y1="200" y2="100"
+  stroke-width="20" stroke="#3E2723" stroke-linecap="round"></line>
+  <line x1="340" x2="340" y1="200" y2="100"
+  stroke-width="20" stroke="#3E2723" stroke-linecap="round"></line>
+  <line x1="160" x2="120" y1="100" y2="75"
+  stroke-width="20" stroke="#3E2723" stroke-linecap="round"></line>
+  <line x1="340" x2="380" y1="100" y2="75"
+  stroke-width="20" stroke="#3E2723" stroke-linecap="round"></line>
+  <line x1="160" x2="200" y1="125" y2="125"
+  stroke-width="20" stroke="#3E2723" stroke-linecap="round"></line>
+  <line x1="340" x2="300" y1="125" y2="125"
+  stroke-width="20" stroke="#3E2723" stroke-linecap="round"></line>
+  <line x1="200" x2="200" y1="125" y2="75"
+  stroke-width="20" stroke="#3E2723" stroke-linecap="round"></line>
+  <line x1="300" x2="300" y1="125" y2="75"
+  stroke-width="20" stroke="#3E2723" stroke-linecap="round"></line>
+  <line x1="160" x2="120" y1="150" y2="150"
+  stroke-width="20" stroke="#3E2723" stroke-linecap="round"></line>
+  <line x1="340" x2="380" y1="150" y2="150"
+  stroke-width="20" stroke="#3E2723" stroke-linecap="round"></line>
+  <line x1="120" x2="120" y1="150" y2="130"
+  stroke-width="20" stroke="#3E2723" stroke-linecap="round"></line>
+  <line x1="380" x2="380" y1="150" y2="130"
+  stroke-width="20" stroke="#3E2723" stroke-linecap="round"></line>
+  <text x="75" y="475" fill="#B71C1C"
+  font-family="Stencil" font-size="60">
+    Merry Xmas</text>
+  </svg>
+
+  <p style="color:#BFBFBF;">
+    hint: click on the nose
+  </p>
+  
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script>
+var noseShape= $("#nose");
+
+var isNosered;
+isNosered = true;
+noseShape.click(function() {
+		if (isNosered == true){
+		//face is red - make it yellow
+		noseShape.attr("fill", "#FA5858");
+
+		isNosered = false;
+} else {
+		//nose isn't red - make it red again
+		noseShape.attr("fill", "url(#radialGrad1)");
+
+		isNosered = true;
+}
+});
+</script>
+</html>
